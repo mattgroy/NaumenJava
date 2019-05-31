@@ -1,23 +1,28 @@
-public class Node {
+class Node
+{
     private int x;
     private int y;
     private Node parent;
 
-    public Node(int x, int y, Node parent) {
+    Node(int x, int y, Node parent)
+    {
         this.x = x;
         this.y = y;
         this.parent = parent;
     }
 
-    public Node getParent() {
+    Node getParent()
+    {
         return this.parent;
     }
 
-    public int getX() {
+    int getX()
+    {
         return x;
     }
 
-    public int getY() {
+    int getY()
+    {
         return y;
     }
 }
