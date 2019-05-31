@@ -25,9 +25,18 @@ public class BFSNavigator implements Navigator
     {
         if (map == null)
             return null;
-        parseMap(map);
 
-        return parseResult(searchBFS());
+        // Если я захочу убрать null логику в особых кейсах,
+        // достаточно убрать try/catch
+        try
+        {
+            parseMap(map);
+            return parseResult(searchBFS());
+        }
+        catch (IllegalArgumentException e)
+        {
+            return null;
+        }
     }
 
     private void parseMap(char[][] map)

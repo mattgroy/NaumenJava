@@ -71,12 +71,25 @@ public class BFSNavigatorTest
     @Test
     public void test_searchRoute_FailureNullInput()
     {
-        char[][] actual = navigatorBFS.searchRoute(null);
-        assertNull(actual);
+        assertNull(navigatorBFS.searchRoute(null));
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void test_searchRoute_ThrowNoStartFound()
+//    @Test(expected = IllegalArgumentException.class)
+//    public void test_searchRoute_ThrowNoStartFound()
+//    {
+//        char[][] input = {
+//            {'.', '.', '.', '.', '.'},
+//            {'#', '.', '#', '#', '#'},
+//            {'.', '.', '.', '.', '.'},
+//            {'.', '.', '.', '.', 'X'},
+//            {'.', '.', '.', '.', '.'}
+//        };
+//
+//        char[][] actual = navigatorBFS.searchRoute(input);
+//    }
+
+    @Test()
+    public void test_searchRoute_FailureNoStartFound()
     {
         char[][] input = {
             {'.', '.', '.', '.', '.'},
@@ -86,11 +99,25 @@ public class BFSNavigatorTest
             {'.', '.', '.', '.', '.'}
         };
 
-        char[][] actual = navigatorBFS.searchRoute(input);
+        assertNull(navigatorBFS.searchRoute(input));
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void test_searchRoute_ThrowNoFinishFound()
+//    @Test(expected = IllegalArgumentException.class)
+//    public void test_searchRoute_ThrowNoFinishFound()
+//    {
+//        char[][] input = {
+//            {'.', '.', '.', '.', '@'},
+//            {'#', '.', '#', '#', '#'},
+//            {'.', '.', '.', '.', '.'},
+//            {'.', '.', '.', '.', '.'},
+//            {'.', '.', '.', '.', '.'}
+//        };
+//
+//        char[][] actual = navigatorBFS.searchRoute(input);
+//    }
+
+    @Test()
+    public void test_searchRoute_FailureNoFinishFound()
     {
         char[][] input = {
             {'.', '.', '.', '.', '@'},
@@ -100,11 +127,25 @@ public class BFSNavigatorTest
             {'.', '.', '.', '.', '.'}
         };
 
-        char[][] actual = navigatorBFS.searchRoute(input);
+        assertNull(navigatorBFS.searchRoute(input));
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void test_searchRoute_ThrowUnknownSymbolFound()
+//    @Test(expected = IllegalArgumentException.class)
+//    public void test_searchRoute_ThrowUnknownSymbolFound()
+//    {
+//        char[][] input = {
+//            {'.', '.', '.', '.', '@'},
+//            {'#', '.', '#', '#', '#'},
+//            {'.', '.', 'H', '.', '.'},
+//            {'.', '.', '.', '.', 'X'},
+//            {'.', '.', '.', '.', '.'}
+//        };
+//
+//        char[][] actual = navigatorBFS.searchRoute(input);
+//    }
+
+    @Test()
+    public void test_searchRoute_FailureUnknownSymbolFound()
     {
         char[][] input = {
             {'.', '.', '.', '.', '@'},
@@ -114,19 +155,38 @@ public class BFSNavigatorTest
             {'.', '.', '.', '.', '.'}
         };
 
-        char[][] actual = navigatorBFS.searchRoute(input);
+        assertNull(navigatorBFS.searchRoute(input));
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void test_searchRoute_ThrowEmptyInputPassed()
+//    @Test(expected = IllegalArgumentException.class)
+//    public void test_searchRoute_ThrowEmptyInputPassed()
+//    {
+//        char[][] input = { };
+//
+//        char[][] actual = navigatorBFS.searchRoute(input);
+//    }
+
+    @Test()
+    public void test_searchRoute_FailureEmptyInputPassed()
     {
         char[][] input = { };
-
-        char[][] actual = navigatorBFS.searchRoute(input);
+        assertNull(navigatorBFS.searchRoute(input));
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void test_searchRoute_ThrowEmptyLineInInputPassed()
+//    @Test(expected = IllegalArgumentException.class)
+//    public void test_searchRoute_ThrowEmptyLineInInputPassed()
+//    {
+//        char[][] input = {
+//            {'.', '.', '.', '.', '@'},
+//            {},
+//            {'X', '.', '.', '.', '.'}
+//        };
+//
+//        char[][] actual = navigatorBFS.searchRoute(input);
+//    }
+
+    @Test()
+    public void test_searchRoute_FailureEmptyLineInInputPassed()
     {
         char[][] input = {
             {'.', '.', '.', '.', '@'},
@@ -134,11 +194,23 @@ public class BFSNavigatorTest
             {'X', '.', '.', '.', '.'}
         };
 
-        char[][] actual = navigatorBFS.searchRoute(input);
+        assertNull(navigatorBFS.searchRoute(input));
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void test_searchRoute_ThrowInconsistent2DArrayPassed()
+//    @Test(expected = IllegalArgumentException.class)
+//    public void test_searchRoute_ThrowInconsistent2DArrayPassed()
+//    {
+//        char[][] input = {
+//            {'.', '.', '.', '.', '@'},
+//            {'#', '#', '.'},
+//            {'X', '.', '.', '.', '.'}
+//        };
+//
+//        char[][] actual = navigatorBFS.searchRoute(input);
+//    }
+
+    @Test()
+    public void test_searchRoute_FailureInconsistent2DArrayPassed()
     {
         char[][] input = {
             {'.', '.', '.', '.', '@'},
@@ -146,6 +218,6 @@ public class BFSNavigatorTest
             {'X', '.', '.', '.', '.'}
         };
 
-        char[][] actual = navigatorBFS.searchRoute(input);
+        assertNull(navigatorBFS.searchRoute(input));
     }
 }
