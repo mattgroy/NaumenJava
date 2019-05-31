@@ -1,3 +1,7 @@
+package app;
+
+import app.navigator.BFSNavigator;
+import app.navigator.Navigator;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,9 +24,10 @@ public class Main {
         Navigator navigator = new BFSNavigator();
         char[][] result = navigator.searchRoute(arrayInput);
 
-        for (char[] chars : result)
-        {
-            System.out.println(chars);
-        }
+        if (result == null)
+            System.out.println(result);
+        else
+            for (char[] chars : result)
+                System.out.println(chars);
     }
 }

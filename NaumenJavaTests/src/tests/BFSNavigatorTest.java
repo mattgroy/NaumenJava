@@ -1,5 +1,9 @@
+package tests;
+
 import static org.junit.Assert.*;
 
+import app.navigator.BFSNavigator;
+import app.navigator.Navigator;
 import java.util.Arrays;
 import org.junit.Test;
 

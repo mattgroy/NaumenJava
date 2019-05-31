@@ -1,3 +1,5 @@
+package app.navigator;
+
 class Node
 {
     private int x;
